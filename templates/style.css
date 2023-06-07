@@ -1,0 +1,235 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Courier New', Courier, monospace;
+
+ }
+
+ body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: url('background1.jpg') no-repeat;
+    background-size: cover;  
+    background-position: center;
+ }
+
+ header {
+    /* color-scheme: aquamarine; */
+    position:fixed;
+    top:0%;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    /* background:rgb(75, 3, 97) ; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 99;
+
+ }
+
+ .logo {
+    font-size: 2em;
+    color: #fff;
+    user-select: none;
+ }
+
+ .navigation a {
+    position: relative;
+    font-size: 1.1em;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 40px;
+ }
+
+ .navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -6px;
+    width: 100%;
+    height: 3px;
+    background: #fff;
+    border-radius: 5px;
+    transform-origin: right;
+    transform: scaleX(0);
+    transition: transform .5s
+ }
+
+ .navigation a:hover::after {
+    transform: scaleX(1);
+
+ }
+
+ .navigation .btnLogin-popup {
+    width: 130px;
+    height: 50px;
+    background: transparent;
+    border: 2px solid #fff;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1.1em;
+    color: #fff;
+    font-weight: 500;
+    margin-left: 40px;
+    transition: .5s;
+ }
+
+ .navigation .btnLogin-popup:hover {
+    background: #fff;
+    color: #162938;
+ }
+
+ .login {
+    color: aliceblue;
+ }
+
+ .icon {
+    color:aliceblue;
+ }
+
+ .label{
+    color: aliceblue;
+
+ }
+
+ .container {
+    display: flex;
+    position: relative;
+    width: 400px;
+    height: 450px;
+    background: transparent;
+    border: 2px solid rgba(15, 35, 209, 0.5);
+    border-radius: 20px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(15, 35, 209, 0.5);
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+
+ }
+
+ .container .form-box {
+    width: 100%;
+    padding: 40px;
+
+ }
+
+ .container .icon-close {
+   color: rgb(204, 0, 194);
+   position: absolute;
+   top: 0;
+   right: 0;
+   background: rgb(0, 0, 0);
+   /* background:-moz-linear-gradient(to right, black, purple) */
+   /* filter: blur(2px); */
+   border-radius: 15px;
+   height: 45px;
+   width: 45px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   cursor: pointer;
+   z-index: 1;
+ }
+ 
+
+ .form-box h2 {
+    font-size: 2em;
+    color:rgba(15, 35, 209, 0.5);
+    text-align: center;
+ }
+
+ .input-box {
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid antiquewhite;
+    margin: 30px 0;
+ }
+
+ .input-box label{
+    position: absolute;
+    top: 50;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: aquamarine;
+    font-weight: 500;
+    pointer-events: none;
+ }
+
+ .input-box input{
+    color: aliceblue;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    padding: 0 35px 0 5px;
+ }
+
+ .input-box .icon {
+    position: absolute;
+    right : 8px;
+    line-height: 50px;
+ }
+
+ .remember-forgot {
+   font-size: .9em;
+   color: aliceblue;
+   font-weight: 100;
+   margin: -15px 0 15px;
+   display: flex;
+   justify-content: space-between;
+ }
+
+ .remember-forgot label input{
+   accent-color: aliceblue;
+   margin-right: 3px;
+ }
+
+ .remember-forgot a{
+   color: violet;
+   text-decoration: none;
+ }
+
+ .btn{
+   width: 100%;
+   height: 45px;
+   background:rgba(40, 5, 87, 0.5);
+   color: mediumaquamarine;
+   border-radius: 8px;
+   border: 1px rgba(144, 2, 187, 0.685) solid;
+   /* transition: .5s; */
+   cursor: pointer;
+   font-size: 1em;
+ }
+
+ .login-register {
+   font-size: .9em;
+   color: blueviolet;
+   text-align: center;
+   font-weight: 500;
+ }
+
+ .login-register p a{
+   color:purple;
+   text-decoration: none;
+   font-weight: 600;
+
+ }
+
+ .login-register p a:hover{
+   text-decoration: underline;
+   /* text-transform: uppercase; */
+ }
+
+ 
