@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import Users 
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -7,11 +7,12 @@ class Topic(models.Model):
     name = models.CharField(max_length=200)
     
     def __str__(self):
-        return self.name
+        return self.name #a topic can have multiplt rooms while a room 
+    # can only have one topic
     
 class Room(models.Model):
-    #host = 
-    # topic
+    host = models.ForeignKey(User, on_delete=models.SET_NULL, null=True)
+    topic = models.ForeignKey(Topic, on_delete=models.SET_NULL, null=True) #because Topic class is above room, we do not need to put quotations
     name = models.CharField(max_length=200)
     description = models.TextField(null = True, blank = True)
     # participants = 
